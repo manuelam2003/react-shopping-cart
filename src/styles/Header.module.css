@@ -1,0 +1,47 @@
+.headerContainer {
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 100%;
+  box-shadow: 0 5px 4px 0 rgb(211, 211, 211);
+
+  /* padding: 1em; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+.logo {
+  height: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  /* padding: 1em 2em; */
+}
+
+.navItem {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navItem:hover,
+.logo:hover {
+  cursor: pointer;
+  color: var(--accentColor);
+}
+.cart {
+  position: relative;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -15px;
+  background-color: rgb(253, 239, 204);
+  width: 1.5em;
+  border-radius: 100%;
+  z-index: -1;
+}
