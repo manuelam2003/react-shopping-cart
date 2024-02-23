@@ -1,0 +1,173 @@
+
+.mainPageContainer {
+    --fontSizeH1: 2em;
+    margin-top: 5vh;
+    position: relative;
+    height: 100%;   
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer > img {
+    max-height: 4em;
+}
+
+/* hide scrollbar */
+
+.featuredProductsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.featuredProductsContainer {
+    background-color: var(--backgroundColor);
+    /* hide scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+   
+    gap: 2em;
+    padding: 2em 1em;
+    
+}
+
+.featuredProduct {
+    display: flex;
+    flex-direction: column;
+    transition: .1s ease;
+}
+
+.featuredProduct:hover {
+    scale: 1.01;
+}
+
+.featuredProduct > img {
+    max-width: 25rem;
+    cursor: pointer;
+}
+
+svg {
+    transition: .1s ease;
+}
+
+svg:hover{
+    cursor: pointer;
+    scale: 1.1;
+    color: var(--accentColor);
+}
+
+.productDescriptionContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: .4em;
+    padding-right: 2em;
+
+    background-color: var(--accentColorTwo);
+    border-top: none;
+}
+.productDescriptionContainer > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+   
+}
+
+.shopBtn {
+    border: 1px solid black;
+  
+    color: var(--foregroundColor);
+    padding: .4em 2em;
+}
+
+.shopBtn:hover {
+    cursor: pointer;
+    color: var(--accentColor);
+    border-color: var(--accentColor) ;
+}
+
+.banner h1 {
+    border: 2px dashed var(--accentColor);
+    color: var(--accentColor) ;
+    padding:  0 .5em;
+    top: 50%;
+    width: max-content;
+    translate:0 -50% ;
+    font-size: var(--fontSizeH1);
+    position: absolute;
+    animation: move 7s linear infinite; 
+    text-wrap: nowrap;
+    overflow: hidden;
+    
+} 
+.banner {
+    height: calc(var(--fontSizeH1)*2);
+    width: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 25, .8);
+   
+}
+
+
+
+h1, h5 {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    /* margin: .5em 1em; */
+}
+
+p {
+    max-width: 70vw;
+    text-align: center;
+   
+}
+
+  
+@keyframes move {
+    0% {
+        transform: translateX(-100%);
+    }
+  
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+
+@media screen and (width < 500px) {
+  
+
+    .featuredProduct > img {
+    max-width: 24rem;
+    }
+
+    .name, .price, .cartIcon {
+        font-size: 1.3em;
+    }
+
+
+
+    .productDescriptionContainer {
+        align-items: center;
+        padding: .1em .6em;
+    }
+
+} 
+

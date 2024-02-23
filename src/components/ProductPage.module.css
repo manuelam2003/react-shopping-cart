@@ -1,0 +1,163 @@
+
+.productPageContainer {
+    padding: 3em;
+    position: absolute;
+    background-color: rgba(61, 61, 61, 0.9);
+   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    /* height: 90vh; */
+    z-index: 1;
+    border: 1px solid var(--accentColor);
+}
+
+.productInfoBody {
+    display: flex;
+    border: 1px solid var(--accentColor);
+    padding: 2em;
+    background-color: var(--backgroundColor);
+
+}
+
+
+.productInfo {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 0 1em;
+}
+
+.closeBtn {
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 2em;
+    height: 2em;   
+    margin: .2em;
+    transition: .2s ease;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+    scale: 1.1;
+
+}
+
+.closeBtn::before,
+.closeBtn::after {
+    content: '';
+    
+    background-color: rgb(255, 255, 255);
+    width: .1em;
+    height: 2em;
+    position: absolute;
+    /* transform: translate(-50%, 50%); */
+
+}
+
+.closeBtn:hover::after,
+.closeBtn:hover::before{
+ background-color: rgb(0, 0, 0);
+}
+
+.closeBtn::after {
+    rotate: 45deg;
+}
+.closeBtn::before {
+    rotate: -45deg;
+}
+
+
+.productPageContainer img {
+    max-height: 25em;
+}
+
+.quantityContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.quantityInput {
+    width: 2em;
+    height: 2em;
+    direction: unset;
+    text-align: center;
+    border-radius: 10px;
+    
+
+}
+
+.plusIcon,
+.minusIcon {
+    height: 1.5em;
+}
+.addToCartBtn {
+    border: 1px solid var(--accentColor);
+    padding: 1em 2em;
+    color: var(--accentColor);
+    background-color: var(--foregroundColor);
+
+ 
+}
+
+.addToCartBtn:hover {
+    cursor: pointer;
+    background-color: var(--accentColor);
+    color: var(--foregroundColor);
+    border-color: var(--foregroundColor);
+}
+
+
+
+
+
+/* removing errows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+@media screen and (width < 600px) {
+    .productPageContainer {
+        padding: 3em 1em;
+        height: 90vh;
+        width: 95%;
+    }
+    .productInfoBody {
+        height: 100%;
+        overflow:scroll ;
+        /* height: 70vh; */
+        flex-direction: column;
+        padding: .2em;
+    }
+    .productInfo {
+        padding: 0;
+    }
+   
+    .productPageContainer img {
+        max-height: 20em;
+       
+    }
+   
+    .name {
+        font-size: 1.6em;
+    }
+}
+
+
